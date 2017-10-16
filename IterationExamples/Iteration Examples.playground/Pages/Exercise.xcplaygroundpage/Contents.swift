@@ -29,12 +29,20 @@ import PlaygroundSupport
 let canvas = Canvas(width: 300, height: 300)
 
 // Below this line, try combining a loop and a single statement to generate the goal
-for y in stride(from: 0, through: 300, by: 20) {
+for y in stride(from: 25, through: 275, by: 50) {
     
-    y
+    for x in stride(from: 25, through: 275, by: 50){
+        canvas.drawEllipse(centreX: y, centreY: x, width: 3, height: 3)
+        var k = random(from: 0, toButNotIncluding: 2)
+        if k == 1 {
+            canvas.drawLine(fromX: y-25, fromY: x-25, toX: y+25, toY: x+25)
+            canvas.lineColor = Color.init(hue: 250, saturation: 100, brightness: 100, alpha: 100)
+        } else {
+            canvas.drawLine(fromX: y-25, fromY: x+25, toX: y+25, toY: x-25)
+             canvas.lineColor = Color.init(hue: 0, saturation: 100, brightness: 100, alpha: 100)
+        }
+    }
     
-    canvas.drawLine (fromX: y, fromY: 0, toX: 300, toY: y)
-    canvas
 }
 /*:
  ## Template code
