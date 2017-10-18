@@ -37,7 +37,7 @@ for x in stride (from: 50, through: 550, by: 100) {
         for p in stride (from: 100, through: 20, by: -20)
         {
       
-            canvas.fillColor = Color.init(hue: random(from: 320, toButNotIncluding: 361), saturation: p, brightness: 100, alpha: random(from: 1, toButNotIncluding: 61))
+            canvas.fillColor = Color.init(hue: random(from: 230, toButNotIncluding: 271), saturation: p, brightness: 100, alpha: random(from: 51, toButNotIncluding: 101))
             canvas.drawEllipse(centreX: x, centreY: y, width: p, height: p)
             
         }
